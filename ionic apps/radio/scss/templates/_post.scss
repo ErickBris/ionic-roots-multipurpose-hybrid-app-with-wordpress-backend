@@ -1,0 +1,28 @@
+.posts{
+	.tabs-icon-left.tabs{
+		.tab-item{
+			font-size: 12px;
+		}
+	}
+	h2{
+		a{
+			color:#000;
+			text-decoration:none;
+		}
+	}
+	img{
+		max-width: 100%;
+	}
+	iframe{
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	.item-body .item-content{
+		padding: 0;
+	}
+}
+
+.has-footer.has-tabs.user-not-logged{
+	bottom:45px!important;
+}

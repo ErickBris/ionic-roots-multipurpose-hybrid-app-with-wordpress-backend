@@ -1,0 +1,43 @@
+<ion-view view-title="{{category.title}}">
+  <ion-content>    
+
+	<ion-refresher
+		pulling-text="Pull to refresh..."
+		spinner="spiral" 
+		on-refresh="doRefresh()">
+	</ion-refresher>
+
+  	<div class="posts">
+		<div class="list card" ng-repeat="item in posts track by $index">
+
+			<div class="item">
+				<h2><a ng-bind-html="item.title"></a></h2>
+			</div>
+
+			<div class="item item-body">
+				<img class="full-image" ng-src="{{ item.custom_fields.image.url }}">
+				<div ng-bind-html="item.content"></div>
+			</div>
+
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<p>Price <span ng-bind-html="item.custom_fields.price[0]"></span></p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="loading-box" ng-show="isFetching">
+		<ion-spinner icon="spiral"></ion-spinner>
+	</div>
+
+	<ion-infinite-scroll 
+		on-infinite="loadMore()" 
+		ng-if="canBeLoaded()" 
+		distance="1%" 
+		spinner="spiral" 
+		class="spinner-calm"
+		immediate-check="false">
+	</ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

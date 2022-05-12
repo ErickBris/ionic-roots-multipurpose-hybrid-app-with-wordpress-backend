@@ -1,0 +1,79 @@
+
+.comment{
+  p{
+    white-space: normal;
+  }
+}
+
+.comment-form{
+  .footer-btn-wrap {
+    position: relative; 
+    height: 100%; 
+    width: 50px; 
+    top: 7px;
+  }
+
+  .footer-btn {
+    position: absolute !important; 
+    bottom: 0;
+  }
+
+  .bar-footer {
+    overflow: visible !important;
+
+    textarea {
+      resize: none;
+      height: 25px;
+      background: #f8f8f8;
+    }
+  }
+
+  button.ion-android-send {
+    padding-top: 2px;
+  }
+
+  .footer-btn-wrap {
+    position: relative; 
+    height: 100%; 
+    width: 50px; 
+    top: 7px;
+  }
+
+
+  .footer-btn {
+    position: absolute !important; 
+    bottom: 0;
+  }
+
+  .ion-email {
+    float: right;
+    font-size: 32px;
+    vertical-align: middle;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .item-input-wrapper{
+    background: #f8f8f8;
+  }
+
+  .message-detail {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .bar.item-input-inset .item-input-wrapper input {
+    width: 100% !important;
+  }
+
+  .message-wrapper {
+    position: relative;
+  }
+
+  .message-wrapper:last-child {
+    margin-bottom: 10px;
+  }
+
+}

@@ -1,0 +1,54 @@
+<ion-view view-title="">
+
+	<ion-nav-buttons side="left" >
+        <div class="item-input-inset">
+            <label class="item-input-wrapper textbox-search">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search"
+                	ng-model="searchTerm" 
+                	ng-change="search(searchTerm)"
+                	ng-model-options="{debounce: 1000}" >
+            </label>
+        </div>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+
+	</ion-nav-buttons>
+
+	<ion-content>    
+		
+	  	<div class="posts">
+
+			<div class="list">
+				<div class="item" ng-show="noResults">
+					No results found, please try other keyword.
+				</div>
+
+				<a class="item item-avatar item-icon-right" href="#/app/search/id/{{item.id}}" ng-repeat="item in posts">
+					<img ng-src="{{ item.custom_fields.image.url }}">
+					<h2 ng-bind-html="item.title"></h2>
+					<p>
+						<span ng-repeat="cat in item.taxonomy_doctor_cat">{{ cat.title }}{{$last ? '' : ', '}}</span>
+					</p>
+					<i class="icon ion-ios-arrow-forward"></i>
+				</a>
+			</div>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+		<ion-infinite-scroll 
+			on-infinite="getPosts()" 
+			ng-if="canBeLoaded()" 
+			distance="1%" 
+			spinner="spiral" 
+			class="spinner-calm"
+			immediate-check="false">
+		</ion-infinite-scroll>
+
+  	</ion-content>
+</ion-view>

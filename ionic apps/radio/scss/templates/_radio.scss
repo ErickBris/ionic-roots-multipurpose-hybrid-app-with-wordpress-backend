@@ -1,0 +1,26 @@
+.radio-page{
+	.item-image{
+		position: relative;
+		.radio-button{
+			position: absolute;
+			left: 50%; top:50%;
+			width: 100px;
+			height: 100px;
+			margin-left:-50px;
+			margin-top:-50px;
+			border-radius:200px;
+			background:rgba(0,0,0,0.7);
+			&::before{
+				color:#fff;
+				font-size: 60px;
+				line-height: 100px;
+			    margin: 0;
+			}
+			&.ion-ios-play{
+				&::before{
+					margin: 0 0 0 10px;
+				}
+			}
+		}
+	}
+}

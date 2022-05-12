@@ -1,0 +1,33 @@
+<ion-view view-title="Programming">
+
+	<ion-content>    
+
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			spinner="spiral" 
+			on-refresh="doRefresh()">
+		</ion-refresher>
+
+		<div class="programming">
+
+			<div class="list">
+				<div class="item item-divider text-uppercase">
+					{{ currentDay }}
+				</div>
+				<div class="item item-avatar" ng-repeat="item in items">
+					<img ng-src="{{ item.image.url }}">
+					<h2 ng-bind-html="item.title"></h2>
+					<p ng-bind-html="item.description"></p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+	</ion-content>
+
+</ion-view>

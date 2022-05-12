@@ -1,0 +1,33 @@
+<ion-view view-title="Contact">
+
+	<ion-content>    
+
+		<img class="full-image" src="img/slide-3.jpg">
+
+		<!-- contact form -->
+		<form name="contactForm" ng-submit="sendEmail(contactForm)" novalidate>
+			<div class="list card">
+
+				<label class="item item-input">
+					<input type="text" placeholder="Full Name" ng-model="contact.name" required>
+				</label>
+				<label class="item item-input">
+					<input type="email" placeholder="Email" ng-model="contact.email" required>
+				</label>
+				<label class="item item-input">
+					<input type="tel" placeholder="Phone Number" ng-model="contact.phone" required>
+				</label>
+				<label class="item item-input">
+					<textarea placeholder="Message" ng-model="contact.message" rows="8" style="resize:none" required></textarea>
+				</label>	
+
+			</div>
+
+			<div class="padding"> 
+				<button class="button button-block button-positive" type="submit">Send Message</button>
+			</div>
+		</form>
+
+	</ion-content>
+
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content class="has-header">
+      <ion-list>
+        <a class="item item-icon-left" menu-close ui-sref="app.stores">
+          <i class="icon ion-ios-location"></i>
+          Store Locations
+        </a>
+        <ion-item class="item-icon-left" menu-close href="#/app/home">
+          <i class="icon ion-ios-paper"></i>
+          News
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close href="#/app/gallery">
+          <i class="icon ion-images"></i>
+          Gallery
+        </ion-item>    
+        <ion-item class="item-icon-left" menu-close href="#/app/about">
+          <i class="icon ion-information-circled"></i>
+          About
+        </ion-item>  
+        <ion-item class="item-icon-left" menu-close href="#/app/forms">
+          <i class="icon ion-levels"></i>
+          Forms
+        </ion-item>  
+        <ion-item class="item-icon-left" menu-close href="#/app/plugins">
+          <i class="icon ion-settings"></i>
+          Native Plugins
+        </ion-item>  
+        <ion-item class="item-icon-left" menu-close href="#/app/contact">
+          <i class="icon ion-email"></i>
+          Contact
+        </ion-item>  
+        <ion-item class="item-icon-left" menu-close ng-click="logout()" ng-show="isLogged">
+          <i class="icon ion-log-out"></i>
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

@@ -1,0 +1,27 @@
+<ion-view view-title="Menu">
+  <ion-content>    
+
+	<ion-refresher
+		pulling-text="Pull to refresh..."
+		spinner="spiral" 
+		on-refresh="doRefresh()">
+	</ion-refresher>
+
+  	<div class="categories">
+
+		<ion-list class="menu-list">
+			<ion-item href="#/app/menu/slug/{{item.slug}}" ng-repeat="item in categories">
+				<img ng-src="{{item.image}}">
+				<h2 ng-bind-html="item.title"></h2>
+			</ion-item>
+		</ion-list>
+
+	</div>
+
+	<div class="loading-box" ng-show="isFetching">
+		<ion-spinner icon="spiral"></ion-spinner>
+	</div>
+
+
+  </ion-content>
+</ion-view>

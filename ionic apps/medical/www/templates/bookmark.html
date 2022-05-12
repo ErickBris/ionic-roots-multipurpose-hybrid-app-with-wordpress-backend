@@ -1,0 +1,43 @@
+<ion-view view-title="Saved Articles">
+  <ion-content>    
+
+  	<div class="posts">
+  		
+		<div class="list card" ng-repeat="item in posts track by $index">
+
+			<div class="item">
+				<h2><a href="#/app/bookmark/post/{{item.id}}" ng-bind-html="item.title"></a></h2>
+				<p am-time-ago="item.date"></p>
+			</div>
+
+			<div class="item item-body">
+				<a href="#/app/post/{{item.id}}"><img class="full-image" ng-src="{{ item.thumbnail_images.medium.url }}"></a>
+				<div ng-bind-html="item.excerpt"></div>
+			</div>
+
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" href="#/app/post/{{item.id}}">
+					<i class="icon ion-android-arrow-dropright"></i>
+					Read More
+				</a>
+				<a class="tab-item" href="#/app/post/{{item.id}}">
+					<i class="icon ion-chatbox"></i>
+					Comment
+				</a>
+				<a class="tab-item" ng-click="deleteBookmark(item.id)">
+					<i class="icon ion-trash-a"></i>
+					Delete
+				</a>
+			</div>
+
+		</div>
+
+		<div class="no-bookmarks" ng-show="!posts.length">
+			<button class="button button-clear icon ion-bookmark"></button>
+			<p>Your list is empty.</p>
+		</div>
+
+	</div>
+
+  </ion-content>
+</ion-view>

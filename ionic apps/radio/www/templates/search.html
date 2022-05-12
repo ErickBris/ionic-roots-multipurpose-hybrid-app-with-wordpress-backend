@@ -1,0 +1,49 @@
+<ion-view view-title="">
+
+	<ion-nav-buttons side="left" >
+        <div class="item-input-inset">
+            <label class="item-input-wrapper textbox-search">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search"
+                	ng-model="searchTerm" 
+                	ng-change="search(searchTerm)"
+                	ng-model-options="{debounce: 1000}" >
+            </label>
+        </div>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+
+	</ion-nav-buttons>
+
+	<ion-content>    
+		
+	  	<div class="posts">
+
+			<ion-list>
+				<ion-item ng-show="noResults">
+					No results found, please try other keyword.
+				</ion-item>
+				<ion-item href="#/app/search/id/{{item.id}}" class="item-icon-right" ng-repeat="item in posts">
+					<span ng-bind-html="item.title"></span>
+					<i class="icon ion-ios-arrow-forward"></i>
+				</ion-item>
+			</ion-list>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+		<ion-infinite-scroll 
+			on-infinite="getPosts()" 
+			ng-if="canBeLoaded()" 
+			distance="1%" 
+			spinner="spiral" 
+			class="spinner-calm"
+			immediate-check="false">
+		</ion-infinite-scroll>
+
+  	</ion-content>
+</ion-view>

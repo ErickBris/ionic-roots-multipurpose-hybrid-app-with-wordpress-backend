@@ -1,0 +1,51 @@
+<ion-view>
+
+	<ion-nav-title>
+		<span ng-if="showNear">Near Stores</span>
+		<span ng-if="!showNear">All Stores</span>
+	</ion-nav-title>
+
+	<ion-nav-buttons side="right">
+		<button class="button" ng-if="isFetching"><ion-spinner class="spinner-light" icon="android" ></ion-spinner></button>
+		<a class="button button-icon icon ion-gear-a" ng-click="showSettings()" ng-if="!isFetching"></a>
+    </ion-nav-buttons>
+
+ 	<ion-content scroll="false" >  
+		<div data-tap-disabled="true" class="map-stores-container" map-lazy-load="http://maps.google.com/maps/api/js" map-lazy-load-params="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJEOXMOQTVDYYd2Tvv5eRbRVt40AWGpZc">
+			<ng-map class="gmap" center="{{ userLocation.lat }}, {{ userLocation.lng }}" zoom="8">
+
+				<marker id="{{ marker.id }}" position="{{marker.location}}"
+					ng-repeat="(id, marker) in stores"
+					on-click="showMarker(marker)">
+				</marker>
+
+				<info-window id="marker-info">
+					<div ng-non-bindable="">
+						<strong class="markerTitle">{{ marker.title }}</strong>
+						<div class="markerContent">
+							<em>{{ marker.distance }} km away</em>
+							<p>{{ marker.description }}</p>
+							<a ui-sref="app.stores.map-location({locationId: marker.original_id })" class="button button-block button-positive">
+								Open Store
+							</a>
+						</div>
+					</div>
+				</info-window>
+
+				<marker class="my-location-marker" position="{{ userLocation.lat }}, {{ userLocation.lng }}" title="my-location-marker"
+			      optimized="false"
+			      icon="{
+			        url:'img/bluedot_retina.png',
+			        size:[34,34],
+			        origin: [0,0],
+			        anchor: [0,34],
+			        scaledSize: [22,22]
+			      }">
+			  	</marker>
+
+			</ng-map>
+		</div>
+
+	</ion-content>
+
+</ion-view>

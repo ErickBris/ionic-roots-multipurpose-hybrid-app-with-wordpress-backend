@@ -1,0 +1,27 @@
+<ion-view view-title="Medical Directory">
+  <ion-content>    
+
+	<ion-refresher
+		pulling-text="Pull to refresh..."
+		spinner="spiral" 
+		on-refresh="doRefresh()">
+	</ion-refresher>
+
+  	<div class="categories">
+
+  		<div class="list medical-list">
+			<a class="item item-icon-right" href="#/app/menu/slug/{{item.slug}}"  ng-repeat="item in categories">
+				<span ng-bind-html="item.title"></span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+  		</div>
+
+	</div>
+
+	<div class="loading-box" ng-show="isFetching">
+		<ion-spinner icon="spiral"></ion-spinner>
+	</div>
+
+
+  </ion-content>
+</ion-view>

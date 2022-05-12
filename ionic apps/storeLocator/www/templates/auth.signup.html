@@ -1,0 +1,37 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Sign Up</h1>
+    <div class="buttons">
+      <button class="button button-clear icon ion-android-close" ng-click="closeSignup()">
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form name="submitForm" ng-submit="doSignup(submitForm)" novalidate> 
+
+      <div class="list list-inset">
+        <label class="item item-input">
+          <span class="input-label">Full Name</span>
+          <input type="text" ng-model="signupData.name" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="signupData.username" required>
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="signupData.email" required>
+        </label>
+        <label class="item item-input item-icon-right">
+          <span class="input-label">Password</span>
+          <i class="icon ion-eye" on-touch="showPassword = !showPassword"></i>
+          <input type="text" ng-if="showPassword" name="password" ng-model="signupData.password" required>
+          <input type="password" ng-if="!showPassword" name="password" ng-model="signupData.password" required>
+        </label>
+      </div>
+      <div class="padding">
+        <button class="button button-block button-positive" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

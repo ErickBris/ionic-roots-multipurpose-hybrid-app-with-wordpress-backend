@@ -1,0 +1,40 @@
+<ion-view view-title="{{ item.title }}">
+	<ion-content>    
+
+		<div class="posts">
+			<div class="list card">
+
+				<div class="item item-avatar">
+					<img ng-src="{{ item.custom_fields.image.url }}">
+					<h2 ng-bind-html="item.title"></h2>
+					<p>
+						<span ng-repeat="cat in item.taxonomy_doctor_cat">{{ cat.title }}{{$last ? '' : ', '}}</span>
+					</p>
+				</div>
+
+				<a class="item item-icon-right" href="tel:{{item.custom_fields.phone[0]}}">
+					Call Now
+					<i class="icon ion-ios-telephone-outline"></i>
+				</a>
+
+				<a class="item item-icon-right" href="mailto:{{item.custom_fields.email[0]}}">
+					Email
+					<i class="icon ion-ios-email-outline"></i>
+				</a>
+
+				<div class="item item-body">
+					<div ng-bind-html="itemContent"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+	</ion-content>
+
+
+</ion-view>

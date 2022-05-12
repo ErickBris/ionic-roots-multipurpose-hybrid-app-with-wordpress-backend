@@ -1,0 +1,55 @@
+<ion-view view-title="{{category.title}}">
+  <ion-content>    
+
+	<ion-refresher
+		pulling-text="Pull to refresh..."
+		spinner="spiral" 
+		on-refresh="doRefresh()">
+	</ion-refresher>
+
+  	<div class="posts">
+		<div class="list card" ng-repeat="item in posts track by $index">
+
+			<div class="item">
+				<h2><a href="#/app/post/{{item.id}}" ng-bind-html="item.title"></a></h2>
+				<p am-time-ago="item.date"></p>
+			</div>
+
+			<div class="item item-body">
+				<a href="#/app/post/{{item.id}}"><img class="full-image" ng-src="{{ item.thumbnail_images.medium.url }}"></a>
+				<div ng-bind-html="item.excerpt"></div>
+			</div>
+
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" href="#/app/post/{{item.id}}">
+					<i class="icon ion-android-arrow-dropright"></i>
+					Read More
+				</a>
+				<a class="tab-item" href="#/app/post/{{item.id}}">
+					<i class="icon ion-chatbox"></i>
+					Comment
+				</a>				
+				<a class="tab-item" ng-click="bookmarkThis(item)">
+					<i class="icon ion-bookmark"></i>
+					Save
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="loading-box" ng-show="isFetching">
+		<ion-spinner icon="spiral"></ion-spinner>
+	</div>
+
+	<ion-infinite-scroll 
+		on-infinite="loadMore()" 
+		ng-if="canBeLoaded()" 
+		distance="1%" 
+		spinner="spiral" 
+		class="spinner-calm"
+		immediate-check="false">
+	</ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="Gallery">
+ 
+	<ion-content>
+
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			spinner="spiral" 
+			on-refresh="doRefresh()">
+		</ion-refresher>
+
+		<div class="gallery gallery-grid">
+
+	  		<div class="row" ng-repeat="row in images | inSlicesOf:3 track by $index" ng-init="$rowIndex = $index">
+	  			<div class="col col-33 photo-item" ng-repeat="image in row track by $index"> 
+	  				<a ng-click="goToSlide($rowIndex, $index)" class="overlay">
+		  				<img ng-src="{{image.url}}">
+					</a>
+	  			</div>
+	  		</div>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+
+	</ion-content>
+
+</ion-view>

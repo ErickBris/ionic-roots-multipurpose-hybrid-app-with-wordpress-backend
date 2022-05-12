@@ -1,0 +1,52 @@
+<ion-view view-title="Article">
+	<ion-nav-buttons side="right">
+		<a class="button button-icon icon ion-android-share-alt" ng-click="sharePost(item)"></a>
+    </ion-nav-buttons>
+	<ion-content>    
+
+		<div class="posts">
+			<div class="list card">
+
+				<div class="item">
+					<h2 ng-bind-html="item.title"></h2>
+					<p am-time-ago="item.date"></p>
+				</div>
+
+				<div class="item item-body">
+					<a href="#"><img class="full-image" ng-src="{{ item.thumbnail_images.medium.url }}"></a>
+					<div ng-bind-html="itemContent"></div>
+				</div>
+
+			</div>
+
+			<div class="list card" ng-if="comments.length > 0">
+				<div class="item item-divider">Comments</div>
+			    <div class="item comment" ng-repeat="comment in comments">
+			      <h2>{{ comment.name }}</h2>
+			      <p ng-bind-html="comment.content"></p>
+			    </div>
+			</div>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+	</ion-content>
+
+
+	<form class="comment-form" name="sendCommentForm" novalidate ng-show="isLogged">
+		<ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+			<label class="item-input-wrapper">
+				<input type="search" placeholder="Send comment" ng-model="theComment">
+			</label>
+			<div class="footer-btn-wrap">
+				<button class="button button-icon icon ion-android-send footer-btn" ng-click="sendComment(item.id)"
+				ng-disabled="!theComment || theComment === ''">
+				</button>
+			</div>
+		</ion-footer-bar>
+    </form>
+
+</ion-view>

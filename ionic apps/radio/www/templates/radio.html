@@ -1,0 +1,25 @@
+<ion-view view-title="Live Radio">
+
+	<ion-content class="radio-page" scroll="false">    
+
+		<div class="list card">
+
+			<div class="item">
+				<h2>Smooth Radio</h2>
+				<p>{{ radioOptions.song }}</p>
+			</div>
+
+			<div class="item item-image">
+				<img ng-src="{{ radioOptions.albumArt }}">
+				<a class="button button-icon icon radio-button" ng-class="{'ion-ios-play': !isPlaying, 'ion-ios-pause': isPlaying}" ng-click="startRadio()"></a>
+			</div>
+
+			<div class="item">
+				<p>{{ radioCurrentTime | SecondsToTimeString }}</p> 
+			</div>
+
+		</div>
+
+	</ion-content>
+
+</ion-view>

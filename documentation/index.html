@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IonRoots - Multi-Purpose Hybrid App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">IonRoots</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#intro">Intro</a></li>
+            <li class="dropdown">
+              <a href="#get-ready">Quick Start</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Project Structure <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#project-structure">Overview</a></li>
+                <li><a href="#workflow">Workflow Development</a></li>
+                <li><a href="#html-templates">HTML Templates</a></li>
+                <li><a href="#app-js">Setup app.js</a></li>
+                <li><a href="#js-controllers">JS Controllers</a></li>
+                <li><a href="#custom-css">CSS</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Plugins &amp; Features <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#plugins-overview">Overview</a></li>
+                <li><a href="#walkthrough">Walkthrough</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#inappbrowser">InAppBrowser</a></li>
+                <li><a href="#socialsharing">Social Sharing</a></li>
+                <li><a href="#emailcomposer">Email Composer</a></li>                
+                <li><a href="#datepicker">Date/Time Picker</a></li>
+                <li><a href="#geolocation">Geolocation</a></li>
+                <li><a href="#pushnotifications">Push Notifications</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Apps <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#apps-overview">Overview</a></li>
+                <li><a href="#wordpressapp">WordPress</a></li>
+                <li><a href="#storeapp">Store Locator</a></li>
+                <li><a href="#restaurantapp">Restaurant</a></li>
+                <li><a href="#radioapp">Radio</a></li>
+                <li><a href="#medicalapp">Medical</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">WordPress as CMS <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#wordpress">Overview</a></li>
+                <li><a href="#wordpress-cpt">Custom Post Type</a></li>
+                <li><a href="#wordpress-cf">Custom Fields</a></li>
+                <li><a href="#wordpress-ssl">SSL</a></li>
+              </ul>
+            </li>
+            <li><a href="#publish-app">Publish your app</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#credits">Credits</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2>IonRoots - Multi-Purpose Hybrid Mobile App v1.0</h2>
+        <p>Hey! Thank you for purchasing my hybrid app. If you have any questions beyond the scope of this documentation, feel free to open a ticket at <a href="http://studio31.co" target="_blank">studio31.co</a> I will get back to you in 48 business hours or less.</p>
+
+        <p><strong>IonRoots</strong> was built with love and also some great frameworks <a href="https://angularjs.org/" target="_blank">Angular.js</a> + <a href="http://ionicframework.com/" target="_blank">Ionic Framework</a></p>
+        <p>
+          <a href="#intro" class="btn btn-primary btn-lg" role="button">Let's start! &raquo;</a>
+          <a href="http://codecanyon.net/user/adanarchila/follow" target="_blank" class="btn btn-info btn-lg">Follow me on Codecanyon</a>
+        </p>
+      </div>
+
+
+      <div class="page-header" id="intro">
+        <h1>Introduction</h1>
+      </div>
+      
+      <div class="alert alert-warning" role="alert">
+        <h4>Requirements</h4>
+        <p>These apps were developed and tested with the latest versions of</p>
+        <ul>
+          <li>Node - <a href="https://nodejs.org" target="_blank">Download</a></li>
+          <li>Ionic - <a href="http://ionicframework.com/getting-started/" target="_blank">Download</a></li>
+          <li>Cordova - <a href="http://cordova.apache.org/#getstarted" target="_blank">Download</a></li>
+          <li>Gulp - <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">Download and install it globally</a></li>
+          <li>Bower - <a href="http://bower.io/#install-bower">Download</a></li>
+          <li>Xcode - <a href="https://developer.apple.com/xcode/downloads/" target="_blank">Download (only for Mac)</a></li>       
+          <li>Install Java - <a href="https://java.com/en/download/help/index_installing.xml">Download</a></li>
+          <li>Android SDK - <a href="https://developer.android.com/studio/index.html" target="_blank">Download</a>. Go to the bottom of the page where it says: <strong>Get just the command line tools</strong>, we only need the command line tools, you are free to use Android Studio if you want. If you are on Mac or Linux I will recommend you read the <strong>SDK Readme.txt</strong> to finish the installation, for window  users there is an installer. There is a step by step tutorial , <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html" target="_blank">click here</a></li>
+          <li>Android Simulator (optional) - The default simulator for android is very slow, I will recommend you get a copy of <a href="http://www.genymotion.com/">Genymotion</a> is a very fast emulator for Android, for personal use is free, or you can test the app directly on your device.</li>
+        </ul>
+
+        <br>
+
+        <p>You also need to know HTML/CSS, JavaScript and AngularJS to edit the files and make a great app. If you don't know any of these languages you can go to <a href="http://www.codecademy.com/" target="_blank">Codecademy</a> and learn them from free, approximate in 20 hours you can learn HTML/CSS, JavaScript and jQuery. Now regarding AngularJS there is a <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js" target="_blank">free course in CodeSchool</a> that you can take. And remember <strong>Practice makes perfect</strong>.</p>
+      </div>
+
+      <p>Roots was made to make your life a bit easier by building app templates that can help you build your own custom apps, for the moment we have these apps: WordPress Blog/News, Store Locator, Restaurant, Radio, Medical Directory.</p>
+
+      <br>
+
+      <p>Each template can be used for another totally different idea, for example the Store Locator app lets you search for stores near your location by using the geolocation on your mobile device, but you can change that to add ATM's or build a totally different app that lets you locate pharmacies, hospitals, etc..</p>
+
+      <p>You are going to find inside Roots 6 directories:</p>
+      <ul>
+        <li>ionic apps</li>
+        <li>documentation (what you are reading now)</li>
+        <li>wordpress plugins</li>
+        <li>wordpress custom fields</li>
+        <li>wordpress custom post types</li>
+      </ul>
+
+      <br>
+
+      <h3>Ionic Apps Directory</h3>
+      <p>This directory has the core of the 5 apps, all the html, css and js files that you are going to need per each project.</p>
+
+      <p>Each app has this directory structure:</p>
+<pre >
+  app/
+  |-- config.xml
+  |-- bower.json
+  |-- gulpfile.js
+  |-- package.json
+  |-- ionic.project  
+  |-- hooks/
+  |-- platforms/
+  |-- plugins/
+  |-- resources/
+  |-- scss/
+  `-- www/
+</pre>
+    
+
+      <h4>config.xml</h4>
+      <p>This file is what you should be editing to modify your application's metadata. Any time you run any ionic cli commands, the tool will look at the contents of config.xml and use all relevant info from this file to define native application information. ionic cli supports changing your application's data via the following elements inside the config.xml file:</p>
+      <ul>
+        <li>The user-facing name can be modified via the contents of the <strong>&lt;name&gt;</strong> element.</li>
+        <li>The package name (AKA bundle identifier or application id) can be modified via the id attribute from the top-level <strong>&lt;widget&gt;</strong> element.</li>
+        <li>The version can be modified via the version attribute from the top-level <strong>&lt;widget&gt;</strong> element.</li>
+        <li>The whitelist can be modified using the <strong>&lt;access&gt;</strong> elements. Make sure the origin attribute of your <strong>&lt;access&gt;</strong> element points to a valid URL (you can use * as wildcard). For more information on the whitelisting syntax, see the docs.phonegap.com. You can use either attribute uri (BlackBerry-proprietary) or origin (standards-compliant) to denote the domain.</li>
+        <li>Platform-specific preferences can be customized via <strong>&lt;preference&gt;</strong> tags. See docs.phonegap.com for a list of preferences you can use.</li>
+        <li>The entry/start page for your application can be defined via the <strong>&lt;content src&gt;</strong> element + attribute.</li>
+      </ul>
+
+      <h4>bower.json</h4>
+      <p>This package contains all the third party libraries we used on IonRoots.</p>
+
+      <h4>gulpfile.js</h4>
+      <p>This file is in charge of concatenating and parsing all our javascript and css files</p>
+
+      <h4>package.json</h4>
+      <p>You can find here all the necessary npm packages and cordova plugins that we need to bulid our app.</p>
+
+      <h4>ionic.project</h4>
+      <p>This file contains important information regarding our ionic project.</p>
+
+      <h4>hooks/</h4>
+      <p>This directory may contains scripts used to customize cordova commands.</p>
+
+      <h4>www/</h4>
+      <p>Contains the project's web artifacts, such as .html, .css and .js files. These are your main application assets. They will be copied on a cordova prepare to each platform's www directory.</p>
+
+      <h4>platforms/</h4>
+      <p>Platforms added to your application will have the native application project structures laid out within this directory.</p>
+
+      <br>
+
+      <h3>Documentation Directory</h3>
+      <p>This file.</p>
+
+      <br>
+
+      <h3>WordPress Plugins Directory</h3>
+      <p>If you are planning to use WordPress as your Cloud CMS you will need these plugins to make it happen, these plugins will help you convert your WordPress site in a Cloud CMS to feed of content your app.</p>
+
+      <br>
+
+      <h3>WordPress Custom Fields Directory</h3>
+      <p>This directory includes a .json file with all the custom fields that I used in my WordPress site to build the 5 apps, you can set this up on your WordPress site as well and modify it according to your needs.</p>
+
+      <br>    
+
+      <h3>WordPress Custom Post Types Directory</h3>
+      <p>This directory contains a .json file that has all the custom post types that I used in my WordPress site to build the 5 apps, you can import it on your WordPRess site and remove the ones you don't need.</p>
+
+      <br><br>
+
+      <div id="get-ready" class="page-header">
+        <h1>Getting Started</h1>
+      </div>
+      <br>
+      <p>First of all you are going to need a text editor for code. My favorite is Sublime Text, you can <a href="http://www.sublimetext.com/" target="_blank">download it here</a>.</p>
+
+      <blockquote>
+        Sublime Text 2 may be downloaded and evaluated for free, however a license must be purchased for continued use. There is currently no enforced time limit for the evaluation.
+      </blockquote>
+
+      <p>If you prefer Adobe software I will recommend <a href="http://www.adobe.com/la/products/dreamweaver.html" target="_blank">Dreamweaver</a>, or if you are more into open source you can download <a href="http://brackets.io/" target="_blank">Brackets</a>.</p>
+
+      <p>Before editing any file of our app there are some commands we need to run to install all the app dependencies. Open your terminal and navigate to your app directory.</p>
+
+      <img src="img/shell.png" class="img-thumbnail">
+
+      <br><br>
+
+      <p>And now run <code>npm install</code></p>
+
+      <img src="img/shell-2.png" class="img-thumbnail">
+
+      <br><br>
+
+      <p>Once npm has installed all the packages, you will see that a new directory called <strong>node_modules</strong> appeared on your directory.</p>
+
+      <p>Now let's run <code>bower install</code></p>
+
+      <img src="img/shell-3.png" class="img-thumbnail">
+
+      <br><br>
+
+      <p>A very important step is to edit now the config.xml and change the id on the <code>widget</code> tag to the ID of your app, a suggestion is to use a reverse domain name, for example <code>com.yourdomain.appname</code>:</p>
+
+<pre class="html">
+
+&#x3C;widget id="co.studio31.dev.wordpress" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"&#x3E;
+
+</pre>
+
+      <p>The fastest way to test your app is in the browser, some functions of the app that needs native plugins like geolocation, camera, etc. won't work correctly in the browser, but most of the other functions should work fine.</p>
+
+      <p>For testing the app you can run <code>ionic serve --lab</code> on the terminal and a browser window will open.</p>
+
+      <img src="img/serve.png" class="img-thumbnail">
+
+      <br><br>
+
+      <p>You will be able to use the app, open the menu, scroll and check how it will look in iOS and Android.</p>
+
+      <p>Now we are ready to install the platforms, in this case android or iOS. So depending what are you trying to build run:</p>
+
+      <p>For building an app for Android run: <code>ionic platform add android</code></p>
+
+      <p>For building an app for iOS run: <code>ionic platform add ios</code> or run both if you want the app for both platforms.</p>
+
+      <img src="img/shell-4.png" class="img-thumbnail">
+
+      <br><br>
+
+      <p>You will see that the platform will be downloaded and installed, also all the plugins that were in the package.json are gonna be installed to our platforms.</p>
+
+      <p>Each app is set up to work with my demo site located in http://dev.studio31.co so you can run them and you should be able to see some content right away.</p>
+
+      <div class="page-header">
+        <h1>Build and Run Android Apps</h1>
+      </div>
+
+      <p>The firste step is to build our app and then we will be able to run it on a simulator or a device.</p>
+
+      <p>To build our app run in the terminal: <code>ionic build android</code></p>
+
+      <p>You will see a lot of output in the terminal, and if everything goes well you should see some success messages in the end.</p>
+
+      <p>After building correctly the app you need to run it on the simulator or a device.</p>
+
+      <p>To run the app in a simulator type <code>ionic emulate android</code></p>
+
+      <p>To run the app in a device type <code>ionic run android</code></p>
+
+      <p>You can do this on Android Studio too if you prefer, but I find it more easier on the terminal.</p>
+
+      <div id="xcode-eclipse" class="page-header">
+        <h1>Build and Run iOS Apps</h1>
+      </div>
+
+      <p>My preferred method to build and run iOS apps is with Xcode.</p>
+
+      <p>The first step is to open the directory of the ios platform is located in <code>/app/platforms/ios/</code> open the Xcode project file.</p>
+
+      <p>Now you can select the target to test this app: iPhone or iPad, and click the play icon to run it, if you have a device connected you will see it on that list next to the app name.</p>
+
+      <img src="img/xcode.png" class="img-thumbnail">
+      <br><br>
+
+      <div class="alert alert-warning" role="alert">
+        <h4>Recommendation</h4>
+        <p>Some plugins require a real device to succesful test the apps, you can always give it a try with the simulators but sometimes you must have a mobile device.</p>
+      </div>
+
+      <div id="project-structure" class="page-header">
+        <h1>Project Structure <small>Customize your app</small></h1>
+      </div>
+
+      <br><br>
+
+      <h2>Overview</h2>
+
+      <p>In this section I will guide through modify the app to your needs, from modifying the html templates and angularjs controllers, to customise the look of your app with CSS.</p>
+
+      <br><br>
+
+      <h2 id="workflow">Workflow Development</h2>
+
+      <p>The main 3 things I use to develop Ionic apps are: Google Chrome, the terminal and Sublime Text 2, only when I need to test a device API I run the apps directly on the devices, I always tend to keep that for the last step of the development.</p>
+
+      <p>The first thing you need to do is go in your terminal to your app directory and run <code>ionic serve --lab</code></p>
+
+      <img src="img/workflow.png" class="img-thumbnail">
+      <br><br>
+
+      <p>This will fire Ionic Lab in our browser usually in this URL: <code>http://localhost:8100/ionic-lab</code></p>
+
+      <img src="img/serve.png" class="img-thumbnail">
+      <br><br>
+
+      <p>The good thing about Ionic Lab is that it will refresh your browser automatically if you make any change in your html/js/css files thanks to the gulpfile.js I built for this project and that's very helpful.</p>
+
+      <div class="alert alert-warning">
+        <p>There is something very important that confuses some users, the main www directory is always located in <code>appname/www</code>.</p>
+        <p>Every time you make changes to this main directory and you want to test these changes you <strong>MUST</strong> type in the terminal <code>ionic prepare</code> this command will grab all the files in your main www directory and copy those files to the platforms www directories, each platform directory (iOS/Android) has its own www directory, but you should never work directly there, because any change that you make on the platforms www directories will be overwritten when you run <code>ionic prepare</code>.</p>
+      </div> 
+
+      <p>Once you are done with your app you can go to the Build and Run section of this documentation to test your app in the devices, and if everything goes fine you can move ahead to the <a href="#publish-app">Publish your app</a> section.</p>
+
+      <h2 id="html-templates">HTML templates</h2>
+
+      <p>Each app has its own <code>www/templates</code> directory where you can find all the templates for the different sections of the app, most of them use Ionic tags if you don't know them you can <a href="http://ionicframework.com/docs/overview/" target="_blank">learn about it here</a>.</p>
+
+      <img src="img/templates.png" class="img-thumbnail">
+      <br><br>
+
+      <p>My suggestion is that whenever possible use normal HTML tags this will improve your app speed, as long as you are running <code>ionic serve --lab</code> after editing any of these templates the browser will refresh so you can see your latest changes.</p>
+
+      <p>If you want to add a new page/template create a file inside the templates directory and then open js/app.js and search for the $stateProvider config, it should look something like this:</p>
+
+<pre class="javascript">
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // lot of url states
+
+  $urlRouterProvider.otherwise( function($injector, $location) {
+    var $state = $injector.get("$state");
+    $state.go("app.home");
+  });
+  
+})
+</pre>
+
+      <p>Right before the $urlRouterProvider you can add your own template url state, something like this:</p>
+
+<pre class="javascript">
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // lot of url states
+
+    .state('app.newpage', {
+      url: '/newpage',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/newpage.html'
+        }
+      },
+      authenticate: true
+    });  
+
+  $urlRouterProvider.otherwise( function($injector, $location) {
+    var $state = $injector.get("$state");
+    $state.go("app.home");
+  });
+  
+})
+</pre>   
+
+      <p>Now you can link to this new page anywhere in the app by making a link like this:</p>
+
+<pre class="html">
+
+&#x3C;a href="#/app/newpage" &#x3E; Go to my new page &#x3C;/a&#x3E;
+
+</pre>
+
+      <h2 id="app-js">Setup app.js</h2>
+
+      <p>The <code>www/js/app.js</code> has a few settings to set up your app, as long as you are running <code>ionic serve --lab</code> this file will be converted to app.min.js so you can use it on your app.</p>
+
+      <p>The first 5 variables of the js/app.js will help you set up your app:</p>
+
+<pre class="javascript">
+
+var api = 'http://dev.studio31.co/api/';
+var useAuth = true;
+var showWalkthrough = true;
+var showOfflineMessage = true;
+var blockIfOffline = true;
+
+</pre>
+      
+      <ol>
+        <li><p>The first variable <strong>api</strong> is very important, for demo purposes you can leave my site there until you are ready to start coding your own app and you set up your own WordPress site or your own custom API url.</p></li>
+
+        <li><p>The second variable <strong>useAuth</strong> if you set this to true, this means your app will request the user to login using a WordPress account, the user will be able to sign up or login, if you set this to false the user won't need to login to see the content of your app.</p></li>
+
+        <li><p>The third variable <strong>showWalkthrough</strong> will show a walkthrough to the user ONLY if the user is new, the template for the wawlkthrough is located in <code>templates/walkthrough.html</code> you can edit it there. If the user visit this page once, the controller will create a localstorage key that will help the app to learn if the user already saw it and don't show it again.</p></li>
+
+        <li><p>The forth variable <strong>showOfflineMessage</strong> if you set this to true and the user lots its network connection (wifi/3g) the app will show a messsage letting know the user that it lose the connection, you can find this message in <code>js/app.js</code> </p>
+
+
+<pre class="javascript">
+
+.run(function($ionicPlatform, $rootScope, $state, User, Walkthrough, $cordovaNetwork, $ionicLoading) {
+
+  $ionicPlatform.ready(function() {
+    
+    // ... lot of code
+
+    $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){      
+      if(showOfflineMessage && blockIfOffline){
+        $ionicLoading.show({
+          template: 'Your device is offline.'
+        }); 
+      }
+
+      if(showOfflineMessage && !blockIfOffline){
+        $ionicLoading.show({
+          template: 'Your device is offline.'
+        });
+
+        // if you don't want to block the app but just show a message, set here the amount of miliseconds for the message.
+        // but if you want to block the app remove the setTimeout.
+        setTimeout(function(){
+          $ionicLoading.hide();           
+        }, 10000);  
+
+      }
+    });
+
+    // ... lot of code
+
+})
+</pre>
+
+        </li>
+        <li>And the last variable <strong>blockIfOffline</strong> if you set this variable to true, the message letting know the client that its device is offline won't disappear until they get back online, if you set it to false, make sure to change the time that this message will remain visible until is hidden again.</li>
+      </ol>
+
+      <h2 id="js-controllers">JS Controllers and Services</h2>
+
+      <p>As you know Ionic uses Angularjs, we can create our own controller to help our templates process information, in the example below of how to add a new page template, we didn't specify any controller for that page, so let's add one now.</p>
+
+
+<pre class="javascript">
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // lot of url states
+
+    .state('app.newpage', {
+      url: '/newpage',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/newpage.html',
+          controller: 'NewPageCtrl' // this will assign the NewPageCtrl to this new template
+        }
+      },
+      authenticate: true
+    });  
+
+  $urlRouterProvider.otherwise( function($injector, $location) {
+    var $state = $injector.get("$state");
+    $state.go("app.home");
+  });
+  
+})
+</pre>      
+
+      <p>Now we have to create our controller, so let's add a new file to <code>/www/js/controllers/newpage.js</code> and let's add this code:</p>
+
+
+<pre class="javascript">
+angular.module('roots.controllers')
+
+.controller('NewPageCtrl', function($scope) {
+
+  // you can add here the code for your controller.
+
+});
+
+</pre>          
+
+      <p>As long as you are running <code>ionic serve --lab</code> your new file <code>newpage.js</code> will be merged with the rest of our javascript controllers which are located in the same directory.</p>
+
+      <p>If you don't know Angularjs let me suggest you <a href="https://www.codeschool.com/courses/shaping-up-with-angular-js" target="_blank">this free course</a> which is pretty cool.</p>
+
+      <p>In the <code>js/controllers</code> you can find all the controllers I coded for IonRoots, but I also coded some services for the app, so you can handle easily the content of the app, you can find them in <code>js/services</code> if you want to add your own services just add a new file to that directory and it will be merged automatically.</p>
+
+      <h2 id="custom-css">CSS</h2>
+
+      <p>All the CSS for this app was made with SCSS, you can find the source located in <code>www/scss/</code> there are two main directories (elements and templates) and one important main file (ionic-app.scss).</p>
+
+      <p>In the ionic-app.scss you can change the main colors of the app and include more items in case you are gonna keep adding files to the elements and templates directories.</p>
+
+      <img src="img/css.png" class="img-thumbnail">
+      <br><br>
+
+      <p>The elements directory has all the elements I customised for this app, for example: comments, images, lists, modal and tabs.</p>
+
+      <p>The templates directory has styles per each template, you can customise them as much as you want, if you are running <code>ionic serve --lab</code> you will be able to see those changes on real time and all the files located in the <code>www/scss</code> directory will be merged in one single file located in <code>www/css/ionic.app.min.css</code>.</p>
+
+
+      <div id="plugins-overview" class="page-header">
+        <h1>Plugins &amp; Features <small>Cordova Plugins and Angular controllers to enhance the user experience</small></h1>
+      </div>
+
+      <h2>Overview</h2>
+
+      <p>All the cordova plugins you need will be installed when you run <code>npm install</code>. You can check them in the <code>app/package.json</code>.</p>
+
+      <p>We are using the <a href="http://ngcordova.com/" target="_blank">ngCordova library</a> to help us interact easily with Cordova Plugins.</p>
+
+      <h2 id="walkthrough">Walkthrough</h2>
+
+      <p>This is a feature, not a plugin. The files for the walkthrough are these:</p>
+
+      <ul>
+        <li>The HTML template file located in <code>www/templates/walkthrough.html</code> you can change there the carousel items (add more or delete) and images.</li>
+        <li>The main controller located in <code>www/js/controllers/walkthrough.js</code></li>
+        <li>The service located in  <code>www/js/services/walkthrough.js</code> it helps us understand if the walkthrough was already seen by the user or not.</li>
+        <li>And the settings located in the js/app.js that will allow us to hide or show it at start.</li>
+      </ul>
+
+      <img src="img/walkthrough.png" class="img-thumbnail">
+      <br><br>
+
+      <h2 id="gallery">Gallery</h2>
+
+      <p>The files for this feature are located here:</p>
+
+      <ul>
+        <li>The HTML template files are located in <code>www/templates/gallery.html</code> and <code>www/templates/gallery-modal.html</code></li>
+        <li>The main controller located in <code>www/js/controllers/gallery.js</code></li>
+        <li>The service located in  <code>www/js/services/gallery.js</code> it helps us manage all the pictures.</li>
+      </ul>
+
+      <p>This feature is connected to a WordPress custom post type, but if you have a custom backend you can use this feature too.</p>
+
+      <p>In the HTML file you can change how many you want to show per row, you also need to change this on the controller, also in the controller you can set up the Custom Post Type Gallery ID. If you need multiple gallery pages, and you are not so good with Angularjs controllers I will recommend you to clone the html template and the controller and change its name to grab other gallery.</p>
+
+      <img src="img/gallery.png" class="img-thumbnail">
+      <br><br>
+
+      <br>
+      <h2 id="inappbrowser">InAppBrowser</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/apache/cordova-plugin-inappbrowser" target="_blank">https://github.com/apache/cordova-plugin-inappbrowser</a></p>
+        <p><strong>ngCordova Documentation</strong> <a href="http://ngcordova.com/docs/plugins/inAppBrowser/" target="_blank">http://ngcordova.com/docs/plugins/inAppBrowser/</a></p>
+      </div>
+
+      <blockquote>
+        <p>The InAppBrowser window behaves like a standard web browser, and can't access Cordova APIs. For this reason, the InAppBrowser is recommended if you need to load third-party (untrusted) content, instead of loading that into the main Cordova webview. The InAppBrowser is not subject to the whitelist, nor is opening links in the system browser.</p>
+
+        <p>The InAppBrowser provides by default its own GUI controls for the user (back, forward, done).</p>
+        <footer><cite>https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md</cite></footer>
+      </blockquote>
+      
+      <p>This means we can use this plugin to have our own browser and open websites in our app, it will give the user its own GUI controls (back, forward, done). If the user selects done the browser will close and the user will see the app again.</p>
+
+
+      <h3>Usage</h3>
+      <br>
+      <p>1. You need a button with a ng-click attribute to point to an inside function in our pluginController.</p>
+
+<pre class="html">
+&#x3C;a class="button" ng-click=&#x22;openWebsite()&#x22;&#x3E;Open Website InAppBrowser&#x3C;/a&#x3E;
+</pre>      
+<br>
+      
+      <p>2. Inside your openWebsite() function use the window.open function and set the URL you want to open.</p>
+
+<pre class="javascript">
+app.controller('pluginsController', function($scope, $compile){
+
+  $scope.openWebsite = function(){
+    var ref = window.open('http://google.com', '_blank', 'location=yes');
+  }
+
+});
+</pre>
+
+      <p>Or you can go to ngCordova documentation to learn more about how to use the InAppBrowser plugin:</p>
+      <p><a href="http://ngcordova.com/docs/plugins/inAppBrowser/" target="_blank">http://ngcordova.com/docs/plugins/inAppBrowser/</a></p>
+
+      <br>
+      <h2 id="socialsharing">Native Social Sharing</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin" target="_blank">https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin</a></p>
+        <p><strong>ngCordova Documentation</strong> <a href="http://ngcordova.com/docs/plugins/socialSharing/" target="_blank">http://ngcordova.com/docs/plugins/socialSharing/</a></p>
+      </div>
+
+      <p>This plugin allows you to use the native sharing window of your mobile device.</p>
+      
+      <img src="img/sharing.png" class="img-thumbnail">
+      <br><br>    
+
+      <h3>Usage</h3>
+      <br>
+      <p>1. You need a button with a ng-click attribute to point to an inside function in our pluginController.</p>
+
+<pre class="html">
+&#x3C;a class="button" ng-click=&#x22;sharePost(item)&#x22;&#x3E;Share&#x3C;/a&#x3E;
+</pre>      
+<br>
+      
+      <p>2. Inside your sharePost() you can use it like this. You can check the <code>js/controllers/post.js</code> to see how I implemented this plugin.</p>
+
+<pre class="javascript">
+
+  $scope.sharePost = function(post){
+
+    $ionicActionSheet.show({
+      buttons: [
+        { text: 'Share on Facebook' },
+        { text: 'Share on Twitter' },
+        { text: 'Share on Email' }
+      ],
+      titleText: 'Share this Article',
+      cancelText: 'Cancel',
+      cancel: function() {
+        // add cancel code..
+      },
+      buttonClicked: function(index) {
+        
+        var message = 'Check out the article: '+post.title;
+        var emailMessage = 'Check out the article: '+post.title+' in this link: '+post.url;
+
+        switch(index) {
+            case 0: // facebook
+              $ionicPlatform.ready(function() {
+                  $cordovaSocialSharing.shareViaFacebook(message, null, post.url)
+              .then(function(result) { }, function(err) { });
+            });
+                break;
+            case 1: // twitter
+              $ionicPlatform.ready(function() {
+                  $cordovaSocialSharing.shareViaTwitter(message, null, post.url)
+              .then(function(result) { }, function(err) { });
+            });
+                break;
+              case 2: // email
+                $ionicPlatform.ready(function() {
+                  $cordovaSocialSharing.shareViaEmail(emailMessage)
+              .then(function(result) { }, function(err) { });
+            });
+                break;
+        }
+
+        return true;
+      }
+    });
+
+  };
+</pre>
+
+      <br>
+      <h2 id="emailcomposer">Email Composer</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/katzer/cordova-plugin-email-composer" target="_blank">https://github.com/katzer/cordova-plugin-email-composer</a></p>
+        <p><strong>ngCordova Documentation</strong> <a href="http://ngcordova.com/docs/plugins/emailComposer/" target="_blank">http://ngcordova.com/docs/plugins/emailComposer/</a></p>
+      </div>
+
+      <blockquote>
+        <p>The plugin provides access to the standard interface that manages the editing and sending an email message. You can use this view controller to display a standard email view inside your application and populate the fields of that view with initial values, such as the subject, email recipients, body text, and attachments. The user can edit the initial contents you specify and choose to send the email or cancel the operation.</p>
+
+        <footer><cite>https://github.com/katzer/cordova-plugin-email-composer</cite></footer>
+      </blockquote>
+      
+      <p>So as long as the user has an email set up in his mobile device we can open their default Mail app to compose an email.</p>
+
+      <h3>Usage</h3>
+      <br>
+      <p>1. You need a button with a ng-click attribute to point to an inside function in our pluginController.</p>
+
+<pre class="html">
+&#x3C;a class="button" ng-click=&#x22;openEmailClient()&#x22;&#x3E;Send Email&#x3C;/a&#x3E;
+</pre>      
+<br>
+      
+      <p>2. Inside your openEmailClient() function use the cordova.plugins.email.open to set up the email composer and launch it.</p>
+
+<pre class="javascript">
+
+// Email Composer plugin
+var emailOptions = {
+  to: 'tim@apple.com',
+  cc: 'bill@microsoft.com',
+  bcc: ['john@doe.com', 'jane@doe.com'],
+  /*
+  attachments: [
+    'file://img/logo.png',
+    'res://icon.png',
+    'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+    'file://README.pdf'
+  ],
+  */
+  subject: 'Ionic Roots',
+  body: 'How are you? Nice greetings from Roots',
+  isHtml: true
+};
+
+$scope.openEmailClient = function(){
+  console.log('email composer plugin');
+  ionic.Platform.ready(function() {
+    console.log('email composer plugin getting ready...');
+        $cordovaEmailComposer.open(emailOptions).then(null, function () {
+      // user cancelled email
+    });
+  });
+};
+
+</pre>
+
+      <br>
+      <h2 id="datepicker">Date/Time Picker</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/VitaliiBlagodir/cordova-plugin-datepicker" target="_blank">https://github.com/VitaliiBlagodir/cordova-plugin-datepicker</a></p>
+        <p><strong>ngCordova Documentation</strong> <a href="http://ngcordova.com/docs/plugins/datePicker/" target="_blank">http://ngcordova.com/docs/plugins/datePicker/</a></p>
+      </div>
+
+      <p>Opens the native datepicker for Android or iOS.</p>
+
+      <h3>Usage</h3>
+      <br>
+      <p>1. We will create a list item with a datePicker() function, and also a label to show the date we selected.</p>
+
+<pre class="html">
+&#x3C;ion-item class="item-icon-left" ng-click="datePicker()"&#x3E;
+  &#x3C;i class="icon ion-calendar"&#x3E;&#x3C;/i&#x3E;
+  Date Picker: &#x3C;span class="item-note">{{pickedDate}}&#x3C;/span&#x3E;
+&#x3C;/ion-item&#x3E;
+</pre>
+
+<br>
+      
+      <p>2. Inside our datePicker() will look like this:</p>
+
+<pre class="javascript">
+
+// Date Picker
+var datePickerOptions = {
+  date: new Date(),
+  mode: 'date', // or 'time'
+  minDate: new Date() - 10000,
+  allowOldDates: true,
+  allowFutureDates: true,
+  doneButtonLabel: 'DONE',
+  doneButtonColor: '#F2F3F4',
+  cancelButtonLabel: 'CANCEL',
+  cancelButtonColor: '#000000'
+};
+
+$scope.pickedDate = 'Pick a date';
+
+$scope.datePicker = function(){
+  console.log('date picker plugin');
+  $ionicPlatform.ready(function() {
+    console.log('date picker plugin getting ready...');
+    $cordovaDatePicker.show(datePickerOptions).then(function(date){
+
+      console.log(date);
+
+      var day   = date.getDate();
+      var month   = date.getMonth() + 1;
+      var year  = date.getFullYear();
+
+      $scope.pickedDate = $filter('date')(date, 'MMMM d, yyyy');    
+    });
+
+  });
+};
+
+</pre>
+
+
+      <br>
+      <h2 id="geolocation">Geolocation</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/apache/cordova-plugin-geolocation" target="_blank">https://github.com/apache/cordova-plugin-geolocation</a></p>
+        <p><strong>ngCordova Documentation</strong> <a href="http://ngcordova.com/docs/plugins/geolocation/" target="_blank">http://ngcordova.com/docs/plugins/geolocation/</a></p>
+      </div>
+
+      <blockquote>
+        <p>This plugin provides information about the device's location, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. There is no guarantee that the API returns the device's actual location.</p>
+
+        <p>This API is based on the W3C Geolocation API Specification, and only executes on devices that don't already provide an implementation.</p>
+        <footer><cite>https://github.com/apache/cordova-plugin-geolocation</cite></footer>
+      </blockquote>
+
+      <p>The best example for this plugin is located in the storeLocator app in the js/all-stores.js file, which it has the controller that lets you see all the locations near your position. </p>
+
+      <h3>Usage</h3>
+      <br>
+<pre class="javascript">
+
+module.controller('GeoCtrl', function($cordovaGeolocation) {
+
+  var posOptions = {timeout: 10000, enableHighAccuracy: false};
+  $cordovaGeolocation
+    .getCurrentPosition(posOptions)
+    .then(function (position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+    }, function(err) {
+      // error
+    });
+
+
+  var watchOptions = {
+    timeout : 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
+  var watch = $cordovaGeolocation.watchPosition(watchOptions);
+  watch.then(
+    null,
+    function(err) {
+      // error
+    },
+    function(position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+  });
+
+
+  watch.clearWatch();
+  // OR
+  $cordovaGeolocation.clearWatch(watch)
+    .then(function(result) {
+      // success
+      }, function (error) {
+      // error
+    });
+});
+
+</pre>     
+
+
+      <br>
+
+
+      <h2 id="pushnotifications">Push Notifications</h2>
+
+      <div class="alert alert-info" role="alert">
+        <p><strong>Plugin Repository</strong> <a href="https://github.com/Pushwoosh/pushwoosh-phonegap-plugin" target="_blank">https://github.com/Pushwoosh/pushwoosh-phonegap-plugin</a></p>
+      </div>
+
+      <p>IonRoots comes ready to use Push Notifications powered by the free an amazing service of <a href="http://www.pushwoosh.com/" target="_blank">PushWoosh</a></p>
+
+      <br>
+
+      <img src="img/push.png" class="img-thumbnail"><br><br>
+
+      <p>You are going to need to create an aacount in <a href="http://www.pushwoosh.com/" target="_blank">PushWoosh</a> and then follow these steps:</p>
+
+      <ol>
+        <li>
+          Create a new PushWoosh application and I will recommend you put the same name of your app to avoid confusions. <br>
+          <img src="img/push-1.png" class="img-thumbnail"><br><br>
+
+        </li>
+        <li>
+          Now you need to configure the iOS and Android plaftorms <br>
+          <img src="img/push-2.png" class="img-thumbnail"><br><br>
+        </li>
+
+        <li>To configure each iOS platform you need an Apple Developer Account, if you already have it <a href="https://www.pushwoosh.com/programming-push-notification/ios/ios-configuration-guide/" target="_blank">follow these instructions</a> and for Android you can <a href="https://www.pushwoosh.com/programming-push-notification/android/android-gcm-api-configuration/" target="_blank">follow this guide</a></li>
+
+        <li>Once you set up your 2 platforms in Pushwoosh, you need to change a few lines of code inside the <code>js/app.js</code>, in the sample code above is located in lines 24 and 26.
+
+          <br><br>
+<pre class="javascript">
+
+function initPushwoosh() {
+
+  var pushNotification = window.plugins.pushNotification;
+
+  //set push notification callback before we initialize the plugin
+  document.addEventListener('push-notification', function(event) {
+
+    if(isAndroid){
+      var title = event.notification.title;
+      var userData = event.notification.userdata;
+      if(typeof(userData) != "undefined") {
+          console.warn('user data: ' + JSON.stringify(userData));
+      }             
+      alert(title);
+    } else {
+      var notification = event.notification;
+      alert(notification.aps.alert);        
+      pushNotification.setApplicationIconBadgeNumber(0);
+    }
+
+  });
+
+  if(isAndroid){
+    pushNotification.onDeviceReady({ projectid: "1015325307791", appid : "46520-1D5DB" }); // Insert your Google Project Number and your PushWoosh App ID
+  } else {
+    pushNotification.onDeviceReady({pw_appid:"46520-1D5DB"}); // Insert your PushWoosh App ID
+  }
+   
+  //register for pushes
+  pushNotification.registerDevice(
+    function(status) {
+      console.warn('registerDevice: ' + status);
+    },
+    function(status) {
+      console.warn('failed to register : ' + JSON.stringify(status));
+      alert(JSON.stringify(['failed to register ', status])); // remove this on production
+    }
+  );
+
+  if(!isAndroid){
+    pushNotification.setApplicationIconBadgeNumber(0);
+  }
+
+}  
+
+initPushwoosh(); // Hide this line if you don't want push notifications
+
+</pre>
+        </li>
+
+        <li>Once your app is ready, the only way you can test the push notifications are in a real mobile device, they won't work in a Simulator. You can check out the console log to see if the mobile device was succesfully subscribed to the Push Notifications, and also you can check this in your PushWoosh Dashboard in the subscribers icon on the top right corner.<br>
+          <img src="img/push-3.png" class="img-thumbnail"><br><br>
+        </li>
+      </ol>      
+
+      <div id="apps-overview" class="page-header">
+        <h1>App Templates <small>5 mobile apps ready to build.</small></h1>
+      </div>
+
+      <h2 id="features-intro">Overview</h2>
+
+      <p>IonRoots comes with 5 mobile apps ready to build. Every app has almost the same controllers and plugins, or you can mix the specific features of each app to create a more complete solution for your project.</p>
+
+      <br>
+
+      <h2 id="wordpressapp">WordPress App</h2>
+      <p>This app will be able to show you all the posts and categories of your WordPress site, it has different ways to show the categories and also it supports comments.</p>
+
+      <p>It has a feature to save for later articles, in case the user doesn't have the time to read it right away.</p>
+
+      <p>It has a built-in search feature, which is very helpful to look for content on your site.</p>
+
+      <p>You can also protect your blog app and only users that have an account on your WordPress site can log in.</p>
+
+      <img src="img/wordpress-app.png" class="img-thumbnail"><br><br>
+
+      <img src="img/wordpress-app-1.png" class="img-thumbnail"><br><br>
+
+      <img src="img/wordpress-app-2.png" class="img-thumbnail"><br><br>
+
+      <img src="img/wordpress-app-3.png" class="img-thumbnail"><br><br>
+
+      <h2 id="storeapp">Store Locator App</h2>
+
+      <p>This app will help you add all your stores so the user can search for all or just the ones near his location, also the user will be able to see more details about each store.</p>
+
+      <p>Each store will have its own single page where you can add more information.</p>
+
+      <p>It has 2 views, the map view and the list view.</p>
+
+      <p>One important thing that you should change on this app is located in <code>js/controllers/all-stores.js</code> in the line 26</p>
+
+<pre class="javascript">
+
+$scope.minDistance = 2000; // Km
+
+</pre>
+
+      <p>This is the minimum distance to show locations around an user, 2000 km is a lot but this was made for demo purposes, I will recommend something around 5-15 km this will depend on your needs.</p>
+
+      <img src="img/store-app-1.png" class="img-thumbnail"><br><br>
+      <img src="img/store-app-2.png" class="img-thumbnail"><br><br>
+      <img src="img/store-app-3.png" class="img-thumbnail"><br><br>
+
+      <h2 id="restaurantapp">Restaurant App</h2>
+
+      <p>This app will allow you to show the menu and pictures of the restaurant. The main set up of this app is made in the WordPress site, you can go to the WordPress as Cloud CMS section to learn more about it.</p>
+
+      <img src="img/restaurant-app-1.png" class="img-thumbnail"><br><br>
+      <img src="img/restaurant-app-2.png" class="img-thumbnail"><br><br>
+
+      <h2 id="radioapp">Radio App</h2>
+
+      <p>The Radio app comes ready to build, you only need to edit the streaming URL of the radio in the <code>js/controllers/radio.js</code> inside the RadioCtrl.</p>
+
+<pre class="javascript">
+
+$scope.streamUrl = 'http://192.99.8.192:3536/'; // Replace this with your own radio stream URL
+
+</pre>
+
+      <p>It also comes with a programming section, this must be set up in the WordPress site, but it will help you show the programming schedule of your radio station right on the app</p>
+
+      <img src="img/radio-app-1.png" class="img-thumbnail"><br><br>
+
+      <p>This app gets the album art of the song that is playing from Last.fm so you need an LastFM application and also your streaming hosting should support Shoutcast DNAS.</p>
+
+
+      <p>Follow these steps to create your own LastFM application and get an API key for your app:</p>
+      <ol>
+        <li>Read the <a href="http://www.last.fm/api/tos" target="_blank">Terms of Service</a> of Last.fm</li>
+        <li>Sign up to get an API account in <a href="http://www.last.fm/api" target="_blank">Last.fm Web Services</a></li>
+        <li>
+          Add a new API Account <br>
+          <img src="img/lastfm-0.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          Fill the form <br>
+          <img src="img/lastfm-1.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          Now you have your own API Key, don't use mine. I'm using it only for demo purposes and also for all the clients that want to test how it works, if you use mine my API key will be banned and nobody will be able to use it, so create your own please.<br>
+          <img src="img/lastfm-2.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          Insert your API Key in the stream service located in <code>js/services/stream.js</code><br>
+
+<pre class="javascript">
+
+.factory('Stream', function($http) {
+
+  var lastFMKey = 'ab68e9a71c1bb15efaa9c706b646dee4';
+
+  // ... more code
+
+</pre>
+
+        </li>
+
+      </ol>
+
+      <br>
+
+      <h2 id="medicalapp">Medical App</h2>
+
+      <p>This app will help you create a medical directory of specialists, you can group them by category and each doctor can have its own page with all their information, the live search will help us search by category or by name.</p>
+
+      <img src="img/medical-app-1.png" class="img-thumbnail"><br><br>
+      <img src="img/medical-app-2.png" class="img-thumbnail"><br><br>
+      <img src="img/medical-app-3.png" class="img-thumbnail"><br><br>
+      
+      <br>
+
+      <br>
+
+      <div id="wordpress" class="page-header">
+        <h1>WordPress <small>As a Cloud CMS</small></h1>
+      </div>
+
+      <h2>Overview</h2>
+      <br>
+
+      <p>One of the crucial stages at mobile apps development is the CMS that will feed our app, when I thought in an easy/fast/powerful tool that can help us deliver content to our app, I thought about WordPress, and here I will show you how to set up WordPress so it can server our app JSON with the content we need.</p>
+
+      <ol>
+        <li>You are going to need to install WordPress on your hosting account. Most hosting companies allow you to set up WordPress with a One-Click Install, but if this is not the case with your hosting company you can <a href="http://codex.wordpress.org/Installing_WordPress" target="_blank">follow these steps</a></li>
+
+        <li>Install and activate these plugins:
+          <ul>
+            <li><strong>JSON API</strong> (included). This plugins is the one in charge of converting WordPress in a JSON API.</li>
+            <li><strong>JSON API User </strong> (included). This plugin will extend the functionality of JSON API to allow our WordPress users to login.</li>
+            <li><strong>Roots JSON API  </strong> (included). This plugin was built for me, it extends the functionality of JSON API to meet the needs of our apps.</li>
+            <li><strong>Search Everything </strong> (included). This plugin will enhance the search engine of WordPress, that will help the search form of our app to be more complete.</li>
+            <li><strong>Categories Images </strong> (included). This plugin will allow us to assign images to the categories, this is helpful so we can show images in the categories of our custom post types.</li>
+            <li><strong>Custom Post Type UI</strong> (included). This plugin will allow us to create custom post types.</li>
+            <li><strong>Advanced Custom Fields Pro</strong> (included). I'm including this plugin on the zip because I own a Developer License. This plugin worth $22 (USD) approx, this plugin will help us build custom fields for our custom post types.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>Once you have all the plugins active, we can continue with the next steps.</p>
+
+      <p>A content model is like a series of similar objects, for example in the storeLocator app we would like to search for Banks, then our content model should be a <code>Bank</code> also called Custom Post Type in WordPress and it must have its own custom fields</p>
+
+      <p>Basically our content model and the custom fields will look like this:</p>
+
+<pre>
+  Bank/
+  |-- Title
+  |-- Description
+  |-- Open Hours
+  |-- Phone
+  |-- Address
+  `-- Location (latitude and longitude)
+</pre>      
+
+      <p>All our entries of the Store content model will have those custom fields, each content model can be different and this will be based on your needs.</p>
+
+      <p>Now we need to set up our content model (custom post type) in WordPress and also set up the custom fields for it, to do that follow these steps:</p>
+
+      <h3>How to create a custom post type and custom fields in WordPress</h3>
+      <ol>
+        <li>
+          <p>Go to the settings of Custom Post Type UI: <strong>CPT UI -> Add New</strong> and fill out the form and then click on "Create New Custom Post Type"</p>
+          <img src="img/wordpress-1.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>You should see now in the left sidebar menu your new Custom Post Type called "Banks".</p>
+          <img src="img/wordpress-2.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Now we need to create the custom fields for this Custom Post Type, to do that we will go to <strong>Custom Fields</strong> option in the left sidebar, and then click on "Add New". </p>
+          <img src="img/wordpress-3.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Now in the rules of this new Field Group you must select our new custom post type.</p>
+          <img src="img/wordpress-4.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Type a title for this Field Gruop, in this example: "Bank Options". Advanced Custom Fields allow us to insert different types of custom fields, click on "+ Add Field" to add the first one that should be the description as a textarea, because the title will appear as default in the custom post type so we can skip it.</p>
+          <img src="img/wordpress-5.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>I kept adding the rest of custom fields. Open Hours, Phone and Address are normal text fields, but the Location it's going to be a Google Map field so we can use latitude and longitude and check in the custom post type the location of the branch in a Google Map. So once you are done with that, click on "Publish".</p>
+          <img src="img/wordpress-6.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Let's go add our first Bank (branch), we go to <strong>Banks -> Add Bank</strong> and fill all our custom fields.</p>
+          <img src="img/wordpress-7.png" class="img-thumbnail"><br><br>
+          <img src="img/wordpress-8.png" class="img-thumbnail"><br><br>
+          <img src="img/wordpress-9.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Once you are happy with your entry, click on publish.</p>
+        </li>
+        <li>
+          <p>I got already 14 banks on my custom post type, so now I will check the JSON of these entries to see if everything is working fine.</p>
+          <p>To check our entries in a JSON format we need to go here:</p>
+          <pre>http://yoursite.com/api/get_posts/?post_type=banks&posts_per_page=-1</pre>
+          <p>Replace yoursite.com with the URL of your site and if you see we have a <strong>post_type</strong> parameter, we must put there the custom post type name we give to our model in the Custom Post Type UI plugin, in my case was <strong>banks</strong>.</p>
+          <p>The <strong>posts_per_page</strong> parameter set to -1 is to let know WordPress that I want ALL the entries of this custom post type, if you put 10 then WordPress will only return 10 entries.</p>
+          <img src="img/wordpress-10.png" class="img-thumbnail"><br><br>
+        </li>
+        <li>
+          <p>Now we can parse this JSON with our own AngularJS controller, you can check the <a href="#geolocation">Geolocation section</a> of this documentation to learn how to do it.</p>
+        </li>
+      </ol>
+
+      <h2 id="wordpress-cpt">WordPress Custom Post Types</h2>
+
+      <p>I've included a backup of all the custom post types that I used on my demo site for all the apps, so you can import it to your WordPress site and be ready right away.</p>
+
+      <div class="alert alert-danger">
+        <p>Before doing this step, <strong>I will recommend you make a backup of your WordPress site.</strong></p>
+      </div>
+
+      <p>You will find this file in <code>/wordpress custom post types/import.json</code>, open the file and copy its content, then go to the WP admin, and click on the <code>CPT UI -> Import/Export</code> and paste it on the import area and then click Import.</p>
+
+      <img src="img/cpt-import.png" class="img-thumbnail"><br><br>
+
+      <p>You should be able to see now all the new custom post types on your WP Admin, now we have to import the Custom Fields.</p>
+
+      <h2 id="wordpress-cpt">WordPress Custom Fields</h2>
+
+      <p>After importing all the new custom post types, you can now import the custom fields, so please go to <code>Custom Fields -> Tools</code> and choose the file that is located in <code>/wordpress custom fields/acf-export.json</code>.</p>
+
+      <img src="img/import-cf.png" class="img-thumbnail"><br><br>
+
+      <p>Your custom post types and custom fields are done and ready to work for you.</p>
+
+      <h2 id="wordpress-ssl">WordPress with SSL</h2>
+
+      <p>By default the user authentication is working without SSL, but you can secure it in case you are using SSL on your WordPress site.</p>
+
+      <p>To do this you need to remove the query parameter <code>insecure=cool</code> from the User service.</p>
+      <p>Search for the file <code>/www/js/services/user.js</code> and find all the strings that look like this <code>insecure=cool&amp;</code> and remove them, save your file while you are running <code>ionic serve --lab</code> so it gets merged in the main js files.</p>
+
+      <div id="publish-app" class="page-header">
+        <h1>Publish your app</h1>
+      </div>
+
+      <p>When you are done with your app development and you are ready to go live, you need to sign your apps, theres is a guide in the Ionic site of how to do this, <a href="http://ionicframework.com/docs/guide/publishing.html" target="_blank">click here</a>, if you still have questions feel free to open a ticket in <a href="http://studio31.co">studio31.co</a></p>
+
+      <div id="help" class="page-header">
+        <h1>Help</h1>
+      </div>
+
+      <br>
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How to install Cordova?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+              <p>To install the cordova command-line tool, follow these steps:</p>
+              <ul>
+                <li>Download and install <a href="http://nodejs.org/" target="_blank">Node.js</a>. Following installation, you should be able to invoke node and npm on your command line. If desired, you may optionally use a tool such as nvm or nave to manage your Node.js installation.</li>
+
+                <li>Download and install a <a href="http://git-scm.com/" target="_blank">git client</a>, if you don't already have one. Following installation, you should be able to invoke git on your command line. Even though you won't be using git manually, the CLI does use it behind-the-scenes to download some assets when creating a new project.</li>
+
+                <li>Install the cordova module using npm utility of Node.js. The cordova module will automatically be downloaded by the npm utility.
+                  <ul>
+                    <li>
+                      <p>On OS X and Linux type in the Terminal</p>
+                      <pre>$ sudo npm install -g cordova</pre>
+                    </li>
+                    <li>
+                      <p>On Windows type in the terminal</p>
+                      <pre>C:\>npm install -g cordova</pre>
+                    </li>
+                  </ul>
+                </li>
+                <li>Following installation, you should be able to run cordova on the command line with no arguments and it should print help text.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How to update Cordova?
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <ul>
+                <li>
+                  <p>On OS X and Linux type in the Terminal</p>
+                  <pre>$ sudo npm update -g cordova</pre>
+                </li>
+                <li>
+                  <p>On Windows type in the terminal</p>
+                  <pre>C:\>npm update -g cordova</pre>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading4">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                How to Add a Platform to Cordova Project?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body">
+              <p>All subsequent commands need to be run within the project's directory, or any subdirectories within its scope:</p>
+              <pre>$ cd hello</pre>
+              <br>
+
+              <p>Before you can build the project, you need to specify a set of target platforms. Your ability to run these commands depends on whether your machine supports each SDK, and whether you have already installed each SDK. Run any of these from a Mac:</p>
+              
+<pre>$ ionic platform add ios
+$ ionic platform add android</pre>
+              
+              <br>         
+              
+              <p>If I want to make only an app with iOS, I will type:</p>
+
+              <pre>$ ionic platform add ios</pre>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading5">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                How to Delete a Platform in Cordova?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+            <div class="panel-body">
+              <p>All subsequent commands need to be run within the project's directory, or any subdirectories within its scope:</p>
+              <pre>$ cd hello</pre>
+              <br>
+
+              <p>If you want to see first which platforms you have in your project, run this on the terminal:</p>
+              <pre>$ ionic platform ls</pre>
+              <br>
+
+              <p>Let's say I have a project with iOS and Android, but now I only need iOS so I will remove Android from the project, I will type this on the terminal.</p>
+              <pre>$ ionic platform remove android</pre>
+              <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading6">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                How to add a plugin in Cordova?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+            <div class="panel-body">
+              <p>If I need to add a new plugin to my project, for example the Geolocation plugin.</p>
+
+              <p>I need to run this command within the project's directory:</p>
+              <pre>$ ionic plugin add org.apache.cordova.geolocation</pre>
+              <br>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading7">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                How to remove a plugin in Cordova?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+            <div class="panel-body">
+              <p>To delete a plugin you must know the plugin name ID, so we will list all the installed plugins on our project with this command:</p>
+              <pre>$ ionic plugin ls</pre>
+              <br>
+
+              <p>Once we have the plugin ID, we type:</p>
+              <pre>$ ionic plugin remove org.apache.cordova.geolocation</pre>
+
+              <p>This will remove the plugin from all the platforms that you have in your project.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading8">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                A plugin is not working, what should I do?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+            <div class="panel-body">
+              <p>I've been developing apps with cordova since 4 years ago, and I've been in some hard situations where the plugins are just not working at all, I always make sure I'm installing the plugin from its original repository and that I'm running the last stable version of it.</p>
+              <p>Once I make sure of that, the 90% of the times I've solve the issue by removing and adding the plugin again. The other 10% I had to to delete the project (of course backing up by www folder first) and then create a new one and add all the plugins again.</p>
+              <p>So if you are having this problem, make sure you give it a try, if you still have problems feel free to <a href="http://codecanyon.net/user/adanarchila" target="_blank">drop me an email</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading9">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                Geolocation plugin is not working in a normal browser.
+              </a>
+            </h4>
+          </div>
+          <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+            <div class="panel-body">
+              <p>I use Google Chrome for debugging my app before teseting it on the simulators, and sometimes if you added the Geolocation Plugin (org.apache.cordova.geolocation) you won't get your location in Google Chrome, so my recommendation is that you delete the plugin from project while debugging on your favorite Browser, remember that the Geolocation plugin API is based on the W3C Geolocation API Specification, that means your browser will handle the geolocation while you don't have the plugin installed.</p>
+
+              <p>Don't forget to add the plugin once you are ready to make the tests on the simulators or your app won't work.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading10">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                How to debug my app?
+              </a>
+            </h4>
+          </div>
+          <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+            <div class="panel-body">
+              <p>These are the tools I use to debug my apps:</p>
+              <ul>
+                <li>Google Chrome and its Web Inspector</li>
+                <li>iOS Simulator and Safari Web Inspector</li>
+                <li>Sometimes I need to use <a href="http://people.apache.org/~pmuellr/weinre-docs/latest/" target="_blank">Weinre</a></li>
+              </ul>
+
+              <div class="alert alert-info">
+                <p>Find more options to debug your app in the <a href="https://github.com/phonegap/phonegap/wiki/Debugging-in-PhoneGap" target="_blank">Phonegap Documentation</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>      
+
+      <div id="credits" class="page-header">
+        <h1>Credits</h1>
+      </div>
+    
+      <br>
+      <h4>Frameworks</h4>
+      <ul>
+        <li><a href="http://cordova.apache.org/" target="_blank">Cordova</a></li>
+        <li><a href="https://angularjs.org/" target="_blank">AngularJS</a></li>
+        <li><a href="http://ionicframework.com/" target="_blank">Ionic Framework</a></li>
+      </ul>
+      <br>
+      <h4>Plugins and Libraries</h4>
+      <ul>      
+        <li><a href="http://ionicons.com/" target="_blank">IonicIcons</a></li>
+        <li><a href="https://developers.google.com/maps/" target="_blank">Google Maps API</a></li>
+        <li><a href="http://www.google.com/fonts" target="_blank">Google Fonts</a></li>
+        <li><a href="https://wordpress.org/plugins/custom-post-type-ui/" target="_blank">Custom Post Type UI</a></li>
+        <li><a href="https://wordpress.org/plugins/json-api/" target="_blank">JSON API</a></li>
+        <li><a href="http://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields Pro</a></li>
+      </ul>
+      <br>
+      <h4>Photos</h4>
+      <ul>
+        <li>Free Food Photos <a href="http://www.freefoodphotos.com/" target="_blank">http://www.freefoodphotos.com/</a></li>
+        <li>Unsplash <a href="https://unsplash.com/" target="_blank">unsplash.com</a></li>
+        <li>Envato Assets</li>
+      </ul>
+
+      <br>
+
+      <div class="alert alert-info">
+        <p>Once again, thanks a lot for purchasing this hybrid app. As I wrote in the beginning, I'd be glad to help you in case you have any questions relating this app. No guarantees, but I will do my best to assist you. Have a great day!</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("pre.html").snippet("html",{style:"acid",menu:false});
+        $("pre.css").snippet("css",{style:"acid",menu:false});
+        $("pre.javascript").snippet("javascript",{style:"acid",menu:false});
+      });
+    </script>
+  </body>
+</html>

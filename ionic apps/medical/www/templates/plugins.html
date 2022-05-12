@@ -1,0 +1,80 @@
+<ion-view view-title="Native Plugins">
+
+	<ion-content>    
+
+		<ion-list>
+			<ion-item class="item-icon-left" ng-click="emailComposer()">
+				<i class="icon ion-email"></i>
+				Email Composer
+			</ion-item>			
+
+			<ion-item class="item-icon-left" ng-click="datePicker()">
+				<i class="icon ion-calendar"></i>
+				Date Picker: <span class="item-note">{{pickedDate}}</span>
+			</ion-item>
+
+			<ion-item class="item-icon-left" ng-click="openSite()">
+				<i class="icon ion-link"></i>
+				InAppBrowser
+			</ion-item>
+
+			<ion-item class="item-icon-left" ng-click="showBanner()">
+				<i class="icon ion-speakerphone"></i>
+				Show Admob Banner
+			</ion-item>
+
+			<ion-item class="item-icon-left" ng-click="hideBanner()">
+				<i class="icon ion-speakerphone"></i>
+				Hide Admob Banner
+			</ion-item>		
+
+			<ion-item class="item-icon-left" ng-click="showInterstitial()">
+				<i class="icon ion-speakerphone"></i>
+				Show Admob Interstitial (if is ready)
+			</ion-item>
+
+		</ion-list>
+<!--
+		<div class="list card">	
+
+			<div class="item">
+				<h2>Camera Plugin</h2>
+			</div>
+
+			<div class="item item-body">
+				<img class="full-image" ng-src="{{placeholderImage}}">
+				<p>This is a demo of how to take a picture, save it in the phone library and insert in the app.</p>
+			</div>
+
+			<div class="item">
+				<button class="button button-block button-positive" ng-click="openCamera()">
+				  Open Camera
+				</button>
+				<button class="button button-block button-calm" ng-click="sharePhoto()">
+				  Share Photo
+				</button>
+			</div>
+
+		</div>
+-->
+		<div class="list card">	
+
+			<div class="item">
+				<h2>Barcode Scanner Plugin</h2>
+			</div>
+
+			<div class="item item-body">
+				<p>This is a demo of how to scan a barcode, please check the console for a result of the scanned object.</p>
+			</div>
+
+			<div class="item">
+				<button class="button button-block button-balanced" ng-click="scanBarcode()">
+				  Open Barcode Scanner
+				</button>
+			</div>
+
+		</div>
+
+	</ion-content>
+
+</ion-view>

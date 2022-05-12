@@ -1,0 +1,20 @@
+{
+  "name": "wordpress",
+  "app_id": "88e32747",
+  "gulpStartupTasks": [
+    "sass",
+    "parsejs",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

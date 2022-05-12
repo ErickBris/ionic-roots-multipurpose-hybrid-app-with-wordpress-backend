@@ -1,0 +1,29 @@
+<ion-view view-title="Categories">
+  <ion-content>    
+
+	<ion-refresher
+		pulling-text="Pull to refresh..."
+		spinner="spiral" 
+		on-refresh="doRefresh()">
+	</ion-refresher>
+
+  	<div class="categories category-grid">
+
+  		<div class="row" ng-repeat="row in categories | inSlicesOf:2">
+  			<div class="col col-50 category-item" ng-repeat="item in row"> 
+  				<a href="#/app/category/id/{{item.id}}" class="overlay">
+	  				<img ng-src="{{item.image}}">
+					<p ng-bind-html="item.title"></p>
+				</a>
+  			</div>
+  		</div>
+
+	</div>
+
+	<div class="loading-box" ng-show="isFetching">
+		<ion-spinner icon="spiral"></ion-spinner>
+	</div>
+
+
+  </ion-content>
+</ion-view>

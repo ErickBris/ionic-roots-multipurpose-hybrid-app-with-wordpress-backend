@@ -1,0 +1,37 @@
+<ion-view >
+
+	<ion-nav-title>
+		<span ng-if="showNear">Near Stores</span>
+		<span ng-if="!showNear">All Stores</span>
+	</ion-nav-title>
+
+	<ion-nav-buttons side="right">
+    	<a class="button button-icon icon ion-gear-a" ng-click="showSettings()"></a>
+    </ion-nav-buttons>
+
+	<ion-content>  
+
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			spinner="spiral" 
+			on-refresh="doRefresh()">
+		</ion-refresher>
+
+		<div class="list">
+
+			<a ui-sref="app.stores.list-location({locationId: item.original_id })" class="item" ng-repeat="item in stores | orderBy:'distance'">
+				<span ng-bind-html="item.title"></span>
+				<span class="item-note">
+			      {{ item.distance }} km away
+			    </span>
+			</a>
+
+		</div>
+
+		<div class="loading-box" ng-show="isFetching">
+			<ion-spinner icon="spiral"></ion-spinner>
+		</div>
+
+	</ion-content>
+
+</ion-view>
